@@ -7,15 +7,8 @@ import Search from "./Search";
 import Image from "next/image";
 import sampleProperty from "../../public/prop.jpeg";
 import LatestProperties from "./LatestProperties";
-
-const StyledImage = styled(Image)(({ theme }) => ({
-  width: "100%",
-  height: "600px",
-  color: theme.palette.primary.main,
-  [theme.breakpoints.down("sm")]: {
-    height: "400px",
-  },
-}));
+import { theme } from "@/styles/theme";
+import SlidingImage from './SlidingImage'
 
 const StyledHeading = styled(Typography)(({ theme }) => ({
   fontWeight: 500,
@@ -45,7 +38,7 @@ const Home = () => {
       </Grid>
       {/* SAMPLE PROPERTY */}
       <Box sx={{ mt: 6 }}>
-        <StyledImage src={sampleProperty} alt="Sample property" />
+          <SlidingImage/>
       </Box>
       <LatestProperties />
     </Box>

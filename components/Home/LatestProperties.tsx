@@ -81,6 +81,78 @@ const latestProperties: LatestProperties = {
       description: "This is a very nice apartment",
       totalLandArea: 375,
     },
+    {
+      id: "4",
+      images: [
+        {
+          id: "#1",
+          CreatedAt: new Date(),
+          CreatedByUserId: "#1",
+          imageURL:
+            "https://assets.website-files.com/5f9bf5434935847cbda09d74/5f9c2eeb38b8244496585ebe_ralph-ravi-kayden-2d4lAQAlbDA-unsplash(1)-p-1080.jpeg",
+          propertyId: "3",
+          UpdatedAt: new Date(),
+          verified: true,
+        },
+      ],
+      locality: "Ketu",
+      numberOfBathrooms: 3,
+      numberOfBedrooms: 3,
+      price: 500000,
+      priceType: PropertyPriceType.PerAnnum,
+      street: "37 Ire-akari, Agiliti",
+      title: "Building One",
+      description: "This is a very nice apartment",
+      totalLandArea: 375,
+    },
+    {
+      id: "5",
+      images: [
+        {
+          id: "#1",
+          CreatedAt: new Date(),
+          CreatedByUserId: "#1",
+          imageURL:
+            "https://assets.website-files.com/5f9bf5434935847cbda09d74/5f9c2eeb38b8244496585ebe_ralph-ravi-kayden-2d4lAQAlbDA-unsplash(1)-p-1080.jpeg",
+          propertyId: "3",
+          UpdatedAt: new Date(),
+          verified: true,
+        },
+      ],
+      locality: "Ketu",
+      numberOfBathrooms: 3,
+      numberOfBedrooms: 3,
+      price: 500000,
+      priceType: PropertyPriceType.PerAnnum,
+      street: "37 Ire-akari, Agiliti",
+      title: "Building One",
+      description: "This is a very nice apartment",
+      totalLandArea: 375,
+    },
+    {
+      id: "6",
+      images: [
+        {
+          id: "#1",
+          CreatedAt: new Date(),
+          CreatedByUserId: "#1",
+          imageURL:
+            "https://assets.website-files.com/5f9bf5434935847cbda09d74/5f9c2eeb38b8244496585ebe_ralph-ravi-kayden-2d4lAQAlbDA-unsplash(1)-p-1080.jpeg",
+          propertyId: "3",
+          UpdatedAt: new Date(),
+          verified: true,
+        },
+      ],
+      locality: "Ketu",
+      numberOfBathrooms: 3,
+      numberOfBedrooms: 3,
+      price: 500000,
+      priceType: PropertyPriceType.PerAnnum,
+      street: "37 Ire-akari, Agiliti",
+      title: "Building One",
+      description: "This is a very nice apartment",
+      totalLandArea: 375,
+    },
   ],
 };
 const LatestProperties: FC = () => {

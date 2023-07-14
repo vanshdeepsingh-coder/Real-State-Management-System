@@ -7,6 +7,8 @@ import { PropertyPriceType, LatestProperties } from "@/types/property";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useTheme } from "@mui/material/styles";
 
+import dynamic from 'next/dynamic'
+
 const latestProperties: LatestProperties = {
   properties: [
     {
@@ -28,9 +30,9 @@ const latestProperties: LatestProperties = {
       numberOfBedrooms: 3,
       price: 500000,
       priceType: PropertyPriceType.PerAnnum,
-      street: "37 Ire-akari, Agiliti",
-      title: "Building One",
-      description: "This is a very nice apartment",
+      street: "1234 Maple Avenue, Anytown, USA",
+      title: "Tranquil Haven",
+      description: "Stunning beachfront villa with panoramic ocean views, private pool, and direct access to the golden sandy beach",
       totalLandArea: 375,
     },
     {
@@ -49,12 +51,12 @@ const latestProperties: LatestProperties = {
       ],
       locality: "Ketu",
       numberOfBathrooms: 3,
-      numberOfBedrooms: 3,
-      price: 500000,
+      numberOfBedrooms: 5,
+      price: 1000000,
       priceType: PropertyPriceType.PerAnnum,
-      street: "37 Ire-akari, Agiliti",
-      title: "Building One",
-      description: "This is a very nice apartment",
+      street: "5678 Elm Street, Cityville, USA",
+      title: "Serene Retreat",
+      description: "Charming suburban home with a lush backyard garden, spacious living areas, and a cozy fireplace for those chilly evenings.",
       totalLandArea: 375,
     },
     {
@@ -72,13 +74,13 @@ const latestProperties: LatestProperties = {
         },
       ],
       locality: "Ketu",
-      numberOfBathrooms: 3,
-      numberOfBedrooms: 3,
-      price: 500000,
+      numberOfBathrooms: 2,
+      numberOfBedrooms: 2,
+      price: 250000,
       priceType: PropertyPriceType.PerAnnum,
-      street: "37 Ire-akari, Agiliti",
-      title: "Building One",
-      description: "This is a very nice apartment",
+      street: "9101 Oak Lane, Suburbia, USA",
+      title: "Enchanted Oasis",
+      description: "Luxurious penthouse apartment in the heart of downtown, offering breathtaking city skyline views, modern finishes, and access to a rooftop pool",
       totalLandArea: 375,
     },
     {
@@ -89,7 +91,7 @@ const latestProperties: LatestProperties = {
           CreatedAt: new Date(),
           CreatedByUserId: "#1",
           imageURL:
-            "https://assets.website-files.com/5f9bf5434935847cbda09d74/5f9c2eeb38b8244496585ebe_ralph-ravi-kayden-2d4lAQAlbDA-unsplash(1)-p-1080.jpeg",
+            "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=600",
           propertyId: "3",
           UpdatedAt: new Date(),
           verified: true,
@@ -97,12 +99,12 @@ const latestProperties: LatestProperties = {
       ],
       locality: "Ketu",
       numberOfBathrooms: 3,
-      numberOfBedrooms: 3,
-      price: 500000,
+      numberOfBedrooms: 6,
+      price: 700000,
       priceType: PropertyPriceType.PerAnnum,
-      street: "37 Ire-akari, Agiliti",
-      title: "Building One",
-      description: "This is a very nice apartment",
+      street: "2468 Pinecrest Road, Countryside, USA",
+      title: "Blissful Abode",
+      description: "Quaint country cottage nestled in a peaceful countryside setting, featuring a picturesque garden, exposed wooden beams, and a cozy fireplace.",
       totalLandArea: 375,
     },
     {
@@ -113,20 +115,20 @@ const latestProperties: LatestProperties = {
           CreatedAt: new Date(),
           CreatedByUserId: "#1",
           imageURL:
-            "https://assets.website-files.com/5f9bf5434935847cbda09d74/5f9c2eeb38b8244496585ebe_ralph-ravi-kayden-2d4lAQAlbDA-unsplash(1)-p-1080.jpeg",
+            "https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg?auto=compress&cs=tinysrgb&w=600",
           propertyId: "3",
           UpdatedAt: new Date(),
           verified: true,
         },
       ],
       locality: "Ketu",
-      numberOfBathrooms: 3,
-      numberOfBedrooms: 3,
-      price: 500000,
+      numberOfBathrooms: 4,
+      numberOfBedrooms: 8,
+      price: 10000000,
       priceType: PropertyPriceType.PerAnnum,
-      street: "37 Ire-akari, Agiliti",
-      title: "Building One",
-      description: "This is a very nice apartment",
+      street: "13579 Willow Court, Lakeside, USA",
+      title: "Harmony Haven",
+      description: "Contemporary urban loft with an open floor plan, floor-to-ceiling windows, and a sleek gourmet kitchen, perfect for the modern city dweller.",
       totalLandArea: 375,
     },
     {
@@ -137,20 +139,20 @@ const latestProperties: LatestProperties = {
           CreatedAt: new Date(),
           CreatedByUserId: "#1",
           imageURL:
-            "https://assets.website-files.com/5f9bf5434935847cbda09d74/5f9c2eeb38b8244496585ebe_ralph-ravi-kayden-2d4lAQAlbDA-unsplash(1)-p-1080.jpeg",
+            "https://images.pexels.com/photos/1693946/pexels-photo-1693946.jpeg?auto=compress&cs=tinysrgb&w=600",
           propertyId: "3",
           UpdatedAt: new Date(),
           verified: true,
         },
       ],
       locality: "Ketu",
-      numberOfBathrooms: 3,
-      numberOfBedrooms: 3,
-      price: 500000,
+      numberOfBathrooms: 2,
+      numberOfBedrooms: 5,
+      price: 900000,
       priceType: PropertyPriceType.PerAnnum,
-      street: "37 Ire-akari, Agiliti",
-      title: "Building One",
-      description: "This is a very nice apartment",
+      street: "8642 Cedar Street, Mountainville, USA",
+      title: "Idyllic Sanctuary",
+      description: "Expansive ranch-style estate on sprawling acres of land, boasting a private tennis court, horse stables, and a spacious outdoor patio for entertaining.",
       totalLandArea: 375,
     },
   ],
@@ -173,6 +175,7 @@ const LatestProperties: FC = () => {
             fontWeight={500}
             variant="h3"
             component="h2"
+            marginTop="5vh"
           >
             Latest Properties
           </Typography>
@@ -196,7 +199,9 @@ const LatestProperties: FC = () => {
               border: "none",
             },
             border: `2px solid ${theme.palette.primary.main}`,
+            marginTop:"5vh"
           }}
+          onClick={()=>location.href="/properties"}
           disableElevation
           variant="outlined"
         >
@@ -218,6 +223,7 @@ const LatestProperties: FC = () => {
               title={p.title}
               description={p.description}
               totalLandArea={p.totalLandArea}
+              on-click={()=>console.log("harry")}
             />
           </Grid>
         ))}
@@ -226,4 +232,4 @@ const LatestProperties: FC = () => {
   );
 };
 
-export default LatestProperties;
+export default dynamic (()=>Promise.resolve(LatestProperties), {ssr:false})

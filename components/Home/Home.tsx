@@ -4,11 +4,11 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Search from "./Search";
-import Image from "next/image";
-import sampleProperty from "../../public/prop.jpeg";
 import LatestProperties from "./LatestProperties";
-import { theme } from "@/styles/theme";
 import SlidingImage from './SlidingImage'
+import InformationBox from './InformationBox'
+
+import dynamic from 'next/dynamic'
 
 const StyledHeading = styled(Typography)(({ theme }) => ({
   fontWeight: 500,
@@ -36,7 +36,7 @@ const Home = () => {
           <Search />
         </Grid>
       </Grid>
-      {/* SAMPLE PROPERTY */}
+      {<InformationBox/>}
       <Box sx={{ mt: 6 }}>
           <SlidingImage/>
       </Box>
@@ -45,4 +45,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default dynamic (()=>Promise.resolve(Home), {ssr:false})

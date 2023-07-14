@@ -1,18 +1,19 @@
 import React from "react"
-import image1 from "./image/image1.jpg"
-import image2 from "./image/image2.jpg"
-import image3 from "./image/image3.jpg"
-import image4 from "./image/image4.jpg"
-import image5 from "./image/image5.jpg"
-import image6 from "./image/image6.jpg"
+import property1 from "./image/property1.jpg"
+import property2 from "./image/property2.jpg"
+import property3 from "./image/property3.jpg"
+import property4 from "./image/property4.jpg"
+import property5 from "./image/property5.jpg"
+import property6 from "./image/property6.jpg"
 
 import Typography from "@mui/material/Typography"
 import Image from "next/image"
 import Paper from "@mui/material/Paper"
 
 import Box from "@mui/material/Box"
+import dynamic from 'next/dynamic'
 
-const colors = [image1, image2, image3, image4, image5, image6];
+const colors = [property1, property2, property3, property4, property5, property6];
 const delay = 2500;
 
 const check = ()=>{
@@ -65,20 +66,8 @@ function SlidingImage() {
           getImage(image,index)
         ))}
       </Typography>
-
-      <Typography sx={{display:"inline-block", height:"20px", width:"20px", borderRadius:"50%", cursor:"pointer", margin:"15px 7px 0px", backgroundColor:"#c4c4c4"}}>
-        {colors.map((_, idx) => (
-          <div
-            key={idx}
-            className={`slideshowDot${index === idx ? " active" : ""}`}
-            onClick={() => {
-              setIndex(idx);
-            }}
-          ></div>
-        ))}
-      </Typography>
     </Typography>
   );
 }
 
-export default SlidingImage;
+export default dynamic (()=>Promise.resolve(SlidingImage), {ssr:false})

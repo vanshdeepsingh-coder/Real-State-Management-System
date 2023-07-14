@@ -60,53 +60,6 @@ const NavBar: FC<INavBarProps> = ({
             </Button>
           ))}
         </Box>
-        <Box display="flex" alignItems="center" gap={2}>
-          <Box sx={{ display: { xs: "none", sm: "flex" } }} gap={2}>
-            {authNavItems.map((link, i) =>
-              link.name === "Log in" ? (
-                <Button
-                  disableElevation
-                  variant="contained"
-                  sx={{
-                    color: navButtonTextColor,
-                    textTransform: "none",
-                    backgroundColor: "rgba(64,87,109,.07)",
-                    width: "5rem",
-                    px: "0.5rem",
-                    ":hover": {
-                      backgroundColor: theme.palette.secondary.main,
-                    },
-                  }}
-                  key={i}
-                >
-                  <Link
-                    style={{ color: "inherit", textDecoration: "none" }}
-                    color="inherit"
-                    href={link.href}
-                  >
-                    {link.name}
-                  </Link>
-                </Button>
-              ) : (
-                <PrimaryButton
-                  sx={{ textTransform: "none", width: "5rem", px: "0.5rem" }}
-                  disableElevation
-                  variant="contained"
-                  key={i}
-                >
-                  <Link
-                    style={{ color: "inherit", textDecoration: "none" }}
-                    color="inherit"
-                    href={link.href}
-                  >
-                    {link.name}
-                  </Link>
-                </PrimaryButton>
-              )
-            )}
-          </Box>
-          <Avatar sx={{ display: user ? "block" : "none" }} />
-        </Box>
       </Toolbar>
     </AppBar>
   );

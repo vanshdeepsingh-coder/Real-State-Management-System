@@ -77,7 +77,6 @@ const PropertyDisplayCard: FC<PropertyOverview> = (props) => {
             border: `3px solid ${theme.palette.grey[300]}`,
             borderRadius: "5px",
             padding: "10px",
-            // flexDirection: { xs: "column", sm: "row" },
           }}
           direction="row"
           divider={<Divider orientation="vertical" flexItem />}
@@ -86,7 +85,6 @@ const PropertyDisplayCard: FC<PropertyOverview> = (props) => {
             sx={{
               display: "flex",
               flexDirection: { xs: "row", sm: "column" },
-              // flexDirection: "column",
               alignItems: "center",
               gap: 1,
             }}
@@ -120,7 +118,6 @@ const PropertyDisplayCard: FC<PropertyOverview> = (props) => {
             sx={{
               display: "flex",
               flexDirection: { xs: "row", sm: "column" },
-              // flexDirection: "column",
               alignItems: "center",
               gap: 1,
             }}
@@ -153,7 +150,6 @@ const PropertyDisplayCard: FC<PropertyOverview> = (props) => {
           <Box
             sx={{
               display: !props.totalLandArea ? "none" : "flex",
-              // flexDirection: { xs: "row", sm: "column" },
               flexDirection: "column",
               alignItems: "center",
             }}

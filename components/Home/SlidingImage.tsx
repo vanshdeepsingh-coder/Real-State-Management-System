@@ -8,9 +8,6 @@ import property6 from "./image/property6.jpg"
 
 import Typography from "@mui/material/Typography"
 import Image from "next/image"
-import Paper from "@mui/material/Paper"
-
-import Box from "@mui/material/Box"
 import dynamic from 'next/dynamic'
 
 const colors = [property1, property2, property3, property4, property5, property6];
@@ -36,7 +33,7 @@ const getImage =(image,index)=>{
 
 function SlidingImage() {
   const [index, setIndex] = React.useState(0);
-  const timeoutRef = React.useRef(null);
+  const timeoutRef=React.useRef(null)
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -46,12 +43,13 @@ function SlidingImage() {
 
   React.useEffect(() => {
     resetTimeout();
-    timeoutRef.current = setTimeout(
+     setTimeout(
       () =>
         setIndex((prevIndex) =>
           prevIndex === colors.length - 1 ? 0 : prevIndex + 1
         ),
       delay
+
     );
 
     return () => {
